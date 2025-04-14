@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>보도 자료 작성</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>보도 자료 작성</h1>
+    <div class="main-content">
+      <!-- 왼쪽: 입력 폼 영역 (아래로 살짝 이동) -->
+      <div class="form-container">
+        <form id="pressReleaseForm">
+          <div class="form-group">
+            <label for="organizer">행사주관</label>
+            <input type="text" id="organizer" name="organizer" required>
+          </div>
+          <div class="form-group">
+            <label for="location">행사장소</label>
+            <input type="text" id="location" name="location" required>
+          </div>
+          <div class="form-group">
+            <label for="date">행사일자</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="form-group">
+            <label for="purpose">행사목적</label>
+            <textarea id="purpose" name="purpose" rows="3" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="expectedScale">행사규모(인원) (예상)</label>
+            <input type="number" id="expectedScale" name="expectedScale" required>
+          </div>
+          <div class="form-group">
+            <label for="supporters">행사 지원자(기관)-재원마련</label>
+            <textarea id="supporters" name="supporters" rows="2" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="actualScale">행사규모(인원) (실제)</label>
+            <input type="number" id="actualScale" name="actualScale" required>
+          </div>
+          <div class="form-group">
+            <label for="guests">행사참석자(주요내빈)</label>
+            <textarea id="guests" name="guests" rows="2" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="agenda">행사내용(식순)</label>
+            <textarea id="agenda" name="agenda" rows="3" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="greeting">대회사 or 기관장 소감</label>
+            <textarea id="greeting" name="greeting" rows="3" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="congratulatory">축사 or 내빈 소감</label>
+            <textarea id="congratulatory" name="congratulatory" rows="3" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="award">유공자 표창</label>
+            <textarea id="award" name="award" rows="2" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="performance">식전공연 or 식후 공연</label>
+            <textarea id="performance" name="performance" rows="2" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="sponsorOrg">행사 후원품 제공 기관(당일)</label>
+            <input type="text" id="sponsorOrg" name="sponsorOrg" required>
+          </div>
+          <div class="form-group">
+            <label for="sponsorGoods">행사 후원물품(규모)</label>
+            <input type="text" id="sponsorGoods" name="sponsorGoods" required>
+          </div>
+          <div class="form-group">
+            <label for="communityImpact">지역사회 미친 영향</label>
+            <textarea id="communityImpact" name="communityImpact" rows="3" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="inquiry">관련 문의</label>
+            <input type="text" id="inquiry" name="inquiry" required>
+          </div>
+          <div class="form-group">
+            <label for="organizerIntro">주최 or 주관 소개</label>
+            <textarea id="organizerIntro" name="organizerIntro" rows="3" required></textarea>
+          </div>
+          <button type="submit">보도자료 생성</button>
+        </form>
+      </div>
+
+      <!-- 오른쪽: 생성된 보도자료 결과 출력 -->
+      <div class="result-container">
+        <h2>생성된 보도자료</h2>
+        <pre id="generatedPressRelease">입력 후 생성된 보도자료가 여기에 표시됩니다.</pre>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
